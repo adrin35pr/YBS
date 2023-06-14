@@ -141,28 +141,26 @@ int main(){
  
     }
 
-    if (getchar() == '1'){
-        
+    if (getchar() == '1') {
+        while (getchar() != '\n');
     
         mainMenu();
-    
         printf("Enter the number to choose: ");
-        char a;
-        scanf("%c", &a);
-        printf("%c", a);
-        return 1;
-
+        char choice = getchar();       
+        while (getchar() != '\n'); //очищення буферу     
+        
+        while (getchar() != '\n') {
         if(getchar() == '1'){
         system("cls");
         // Вибір додавати чи віднімати з балансу
         printf("plus or minus");        
 
-       }else if(getchar() == '2'){
+       }else if(choice == '2'){
         system("cls");
         // Підкачати статистику з файлу
         printf("your statistic");
 
-       }else if(getchar() == '3'){
+       }else if(choice == '3'){
         system("cls");
         // Рахунки, їх баланс і/або кількість добутку/втрат
         printf("rahunki");
@@ -178,9 +176,8 @@ int main(){
         printf("AAAAVTOMOBILE");
 
     } 
-
-    }
-        
+    
+  }        
     // printf("Cake is lie"); // PLACEHOLDER Тут має бути функція меню добутку/витрат
 
     // Після виконання очищується консоль та інтерфейс переносить на головне меню    
