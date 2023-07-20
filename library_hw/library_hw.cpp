@@ -57,6 +57,7 @@ void TITLE_SCREEN(){
 
 class Book{
     public:
+        // Вся інформація про книгу
         string book_name;
         string book_author;
         int publication_year;
@@ -66,6 +67,7 @@ class Book{
 class Reader {
     private:
         string reader_name;
+        //Взяті книги поки що будуть у вигляді кількості
         int taken_books {};
 
 };
@@ -78,7 +80,7 @@ class Library{
 };
 
     int main(){
-
+        
         TITLE_SCREEN();
         
         string enter_pusher;
