@@ -109,5 +109,8 @@ class Library{
             }
 
 
+            cout <<  "see you next time";
+            sleep(1);
+
         return 0;
     }
