@@ -82,6 +82,7 @@ class Library{
     int main(){
         
         TITLE_SCREEN();
+
         
         string enter_pusher;
         getline(cin, enter_pusher);
@@ -92,27 +93,41 @@ class Library{
 
         }
 
+        
+        cout << "1. Library;" << endl;
+        cout << "2. Readers" << endl;
+        
+        cout << "Choose by using numbers: ";
+        int choice_main_menu;
+        cin >> choice_main_menu;
 
+        if (choice_main_menu == 1){
+            //тут треба прогрузити весь списко книг, тобто весь клас Library
+            cout << "Choose a book using numbers: " << endl;
+            int book_number;
+            cin >> book_number;
 
-    cout << "Choose a book" << endl;
-    int book_number;
-    cin >> book_number;
-
-    int i; i = book_number;
+            int i; i = book_number;
     
-        Library library;
-            cout << "Book: " << library.library_books[i-1].book_name << endl;
-            cout << "Author: " << library.library_books[i-1].book_author << endl;
-            cout << "Year: " << library.library_books[i-1].publication_year << endl;
-            if (library.library_books[i-1].library_status == 0){
-                cout << "Status: Not enable" << endl;
-            } else if (library.library_books[i-1].library_status == 1){
-                cout << "Status: Enable" << endl;
+            Library library;
+                cout << "Book: " << library.library_books[i-1].book_name << endl;
+                cout << "Author: " << library.library_books[i-1].book_author << endl;
+                cout << "Year: " << library.library_books[i-1].publication_year << endl;
+                if (library.library_books[i-1].library_status == 0){
+                    cout << "Status: Not enable" << endl;
+                } else if (library.library_books[i-1].library_status == 1){
+                    cout << "Status: Enable" << endl;
+                }
+          
             }
 
 
+        
+            if (choice_main_menu == 0){
             cout <<  "see you next time";
             sleep(1);
+            return 0;
+            }
 
         return 0;
     }
